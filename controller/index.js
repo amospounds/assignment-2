@@ -8,7 +8,7 @@ indexController.getHome = function (req, res, next) {
   let user = "Sahmie";
   let time = new Date().toLocaleDateString();
 
-  res.render("index", { pageName: pageName, user: user, time: time ,title:"car model sales"});
+  res.render("index", { pageName: pageName, user: user, time: time ,title:"car marketing sales"});
 };
 
 module.exports = indexController;

@@ -21,7 +21,7 @@ salesController.createAPost = function (req, res, next) {
 
 
   pool.query(
-    `INSERT INTO salesblack (Manufacturer,Model,Color,Year ) VALUES ($1 , $2, $3,$4)`,
+    `INSERT INTO salesblack (MANUFACTURER,MODEL,COLOR,YEAR ) VALUES ($1 , $2, $3, $4)`,
     [manufacturer , model, color, year],
     (error, results) => {
       console.log(results);
@@ -66,14 +66,15 @@ salesController.editAPost = function (req, res, next) {
   );
 };
 
+
 salesController.updateAPost = function (req, res, next) {
   const id = req.params.id;
 
-  let manufacturer = req.body.manufacturer ;
+  let manufacturer = req.body.manufacturer;
   let model = req.body.model;
   let color = req.body.color;
   let year = req.body.year;
-
+  
   pool.query(
     "UPDATE salesblack SET manufacturer = $1, model = $2, color = $3,year = $4 WHERE id = $5",
     [manufacturer , model, color, year, id],
@@ -85,5 +86,6 @@ salesController.updateAPost = function (req, res, next) {
     }
   );
 };
+
 
 module.exports = salesController;

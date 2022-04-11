@@ -32,9 +32,9 @@
             <span>
                 <%- i + 1 %>
             </span>
-            <%- salesPosts[i].Manufacturer  %> by <%- salesPosts[i]. Model %><a
-            href="/sales/<%= salesPosts[i].id%>/delete">Delete</a> <a
-            href="/sales/<%= salesPosts[i].id%>/edit">Edit</a>
+            <%- salesPosts[i].model %> by <%- salesPosts[i].color %> <a
+                        href="/sales/<%= salesPosts[i].id%>/delete">Delete</a> <a
+                        href="/sales/<%= salesPosts[i].id%>/edit">Edit</a>
         </p>
         <% } %>
 

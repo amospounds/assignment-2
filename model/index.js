@@ -31,7 +31,7 @@ pool.query(
   `CREATE TABLE IF NOT EXISTS salesblack(
       ID SERIAL PRIMARY KEY,
       Manufacturer VARCHAR(40) NOT NULL,
-      Model VARCHAR NOT NULL,
+      Model VARCHAR (40) NOT NULL,
       Color VARCHAR(40) NOT NULL,
       Year INTEGER NOT NULL)`,
   
